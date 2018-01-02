@@ -1,25 +1,36 @@
-# g0blin
+# g0blin-apt
 
 (WIP) jailbreak for iOS 10.3.x on A7-A9 devices
 
-v0rtex + yalu102
+v0rtex + yalu102 + apt
 
 ## what works
 - tfp0
 - kernel r/w access
 - remount / as r/w
 - amfi patched
-- starts an ssh server listening on port 2222
-- command line tools to install packages (dpkg, apt-get if you install it)
-- Substrate
+- Dropbear: automatically starts an ssh server listening on port 2222
+- Cydia Substrate
+- Cydia (partially: usefull to add/remove sources or browse packages info)
+- apt-get and dpkg to install packages
 
 ## what doesn't work
-- Cydia (I have temporarily given Cydia a special entitlement so it will run, but it cannot install packages)
-- GUI apps that need root priveledges are experiencing a sandbox error
-- Filza can be fixed by applying the same extra entitlement given to Cydia
-- I am trying to figure out the problem
+- Cydia installation
 
+## How to install packages
+### To update sources
+apt-get update
 
-thanks to everyone helping out, finding offsets, testing, etc!
+###To search packages
+cydia_search <package_name>
 
-creds: Lucky Tobasco, Sizuga, Xenu, Saurik
+### To install something
+cydia_install <package_name>
+
+### To remove something 
+cydia_remove <package_name>
+
+### To reload data (uicache + respring)
+cydia_reload
+
+creds: qwertyoruiopz, Sizuga, Xenu, Saurik, Sticktron 
