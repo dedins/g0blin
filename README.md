@@ -21,16 +21,23 @@ v0rtex + yalu102 + apt
 ### To update sources
 apt-get update
 
-###To search packages
+### To search packages
+```
 cydia_search <package_name>
-
+```
 ### To install something
+```
 cydia_install <package_name>
+```
 
 ### To remove something 
+```
 cydia_remove <package_name>
+```
 
 ### To reload data (uicache + respring)
+```
 cydia_reload
+```
 
 creds: qwertyoruiopz, Sizuga, Xenu, Saurik, Sticktron 
